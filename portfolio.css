@@ -1,0 +1,357 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'poppins', 'sans-serif';
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    color: white;
+    scroll-behavior: smooth;
+}
+
+
+.container {
+    width: 100%;
+    height: 100vh;
+}
+
+header {
+    padding-bottom: 10%;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    margin: 0%;
+    background-color: black;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 10%;
+}
+
+header nav .logo {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    background: linear-gradient(to left, #4200fc, #f901fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+header nav .nav-links a {
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    letter-spacing: 2px;
+    margin-left: 50px;
+    position: relative;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.ic {
+    display: none;
+}
+
+header nav .nav-links a:hover {
+    color: aqua;
+    transition: 0.3s;
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10%;
+    height: 400px;
+}
+
+
+.content h1 {
+    color: aqua;
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+.content span {
+    background: linear-gradient(to left, #4200fc, #f901fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.content p {
+    color: white;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    line-height: 1.5;
+    font-size: 20px;
+}
+
+.btn {
+    padding: 15px 35px;
+    background: linear-gradient(to left, #4200fc, #f901fc);
+    border-radius: 30px;
+    color: rgb(255, 255, 255);
+    font-size: larger;
+}
+
+.btn:hover {
+    color: rgb(255, 255, 255);
+    background: aqua;
+    transition: .3s;
+}
+
+.img img {
+    width: 380px;
+    border-radius: 50%;
+}
+
+
+.text {
+    padding-right: 15%;
+}
+
+.projects,
+.certificates {
+    width: 100%;
+    height: fit-content;
+    padding: 10%;
+    padding-bottom: 5%;
+    display: block;
+}
+
+.projects h3,
+.certificates h3 {
+    color: transparent;
+    -webkit-text-stroke: 2px aqua;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+
+.project h4,
+.certificate h4 {
+    background: linear-gradient(to left, #4200fc, #f901fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    font-size: 30px;
+    padding-top: 2rem;
+}
+
+.project p,
+.certificate p {
+    color: white;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.project .btn,
+.certificate .btn {
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    background: linear-gradient(to left, #4200fc, #f901fc);
+    border-radius: 30px;
+    color: white;
+    display: inline-block;
+    margin-top: 25px;
+    transition: 0.3s;
+}
+
+.project .btn:hover,
+.certificate .btn:hover {
+    background: aqua;
+    transition: .3s;
+}
+
+.contact {
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    display: flex;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex: 0 0 50%;
+    gap: 10px;
+}
+
+form h1 {
+    text-align: center;
+    color: transparent;
+    -webkit-text-stroke: 2px aqua;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+button {
+    padding: 10px;
+    margin-top: 20px;
+    background: linear-gradient(to left, #4200fc, #f901fc);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background: aqua;
+    transition: .3s;
+}
+
+@media (max-width: 768px) {
+
+    header {
+        width: 100%;
+    }
+
+    header nav .logo {
+        font-size: 20px;
+        padding-left: 20px;
+    }
+
+    header nav {
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
+        padding: 5% 0%;
+        flex-wrap: wrap;
+        align-items: center;
+        height: 3.5rem;
+
+    }
+
+    .nav-links {
+        width: 100%;
+        z-index: 10;
+        background-color: black;
+        max-height: 0%;
+        text-align: center;
+        order: 2;
+        display: block;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    .nav-links.open {
+        max-height: 200px;
+    }
+
+
+    header nav .nav-links a {
+        font-size: 10px;
+        width: 100%;
+        color: white;
+        display: flex;
+        margin: 0%;
+        justify-content: center;
+        align-items: center;
+        padding: 7px 0px;
+    }
+
+    .ic {
+        display: block;
+        order: 1;
+        padding-right: 20px;
+        cursor: pointer;
+    }
+
+    .content {
+        padding: 6%;
+
+    }
+
+    .content h1 {
+        font-size: 25px;
+    }
+
+    .content span {
+        font-size: 20px;
+    }
+
+    .content p {
+        font-size: 12px;
+    }
+
+    .img img {
+        width: 7rem;
+        position: relative;
+        left: 10px;
+    }
+
+    .btn {
+        padding: 4px 6px;
+        font-size: 14px;
+    }
+
+    .projects {
+        background-color: black;
+        padding: 0% 6% 6% 6%;
+        height: max-content;
+
+    }
+
+    .container {
+        height: 100vh;
+    }
+
+    .projects h3 {
+        font-size: 32px;
+        margin-bottom: 0px;
+    }
+
+    .project h4 {
+        font-size: 16px;
+        padding-top: 2rem;
+    }
+
+    .project p {
+        margin-top: 10px;
+        font-size: 12px;
+    }
+
+    .project .btn {
+        padding: 4px 6px;
+        border-radius: 30px;
+        margin-top: 15px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+        width: 100%;
+        padding: 4px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 12px;
+    }
+}
